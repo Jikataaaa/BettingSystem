@@ -34,10 +34,11 @@ public class DbInit implements CommandLineRunner {
             user.setUsername("user");
             user.setPassword(encoder.encode("user"));
             userRepository.save(user);
-            user.setRole(roleRepository.findByRole(UserRole.ADMIN));
-            user.setUsername("user");
-            user.setPassword(encoder.encode("admin"));
-            userRepository.save(user);
+            User admin = new User();
+            admin.setRole(roleRepository.findByRole(UserRole.ADMIN));
+            admin.setUsername("admin");
+            admin.setPassword(encoder.encode("admin"));
+            userRepository.save(admin);
         }
 
 
