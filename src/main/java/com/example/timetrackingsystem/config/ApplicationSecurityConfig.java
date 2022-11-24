@@ -25,7 +25,7 @@ public class ApplicationSecurityConfig {
 
                 .authorizeRequests(auth ->{
                     auth.antMatchers("/").permitAll();
-                    auth.antMatchers("/users").hasRole("USER");
+                    auth.antMatchers("/users", "/asd").hasRole("USER");
                     auth.antMatchers("/admin").hasRole("ADMIN");
                 })
                 .httpBasic(Customizer.withDefaults())
