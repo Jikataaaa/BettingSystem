@@ -1,6 +1,6 @@
-package com.example.timetrackingsystem.models.entities;
+package com.example.bettingsystem.models.entities;
 
-import com.example.timetrackingsystem.models.BaseEntity;
+import com.example.bettingsystem.models.BaseEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;

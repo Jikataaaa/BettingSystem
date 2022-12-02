@@ -1,4 +1,4 @@
-package com.example.timetrackingsystem.config;
+package com.example.bettingsystem.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,13 +21,14 @@ public class ApplicationSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.csrf(csrf -> csrf.disable())
+        return http
 
                 .authorizeRequests(auth ->{
                     auth.antMatchers("/").permitAll();
                     auth.antMatchers("/users", "/asd").hasRole("USER");
                     auth.antMatchers("/admin").hasRole("ADMIN");
                 })
+                .formLogin().loginPage("/login").and()
                 .httpBasic(Customizer.withDefaults())
 
                 .build();

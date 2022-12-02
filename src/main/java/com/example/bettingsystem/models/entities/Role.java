@@ -1,7 +1,7 @@
-package com.example.timetrackingsystem.models.entities;
+package com.example.bettingsystem.models.entities;
 
-import com.example.timetrackingsystem.models.BaseEntity;
-import com.example.timetrackingsystem.models.enums.UserRole;
+import com.example.bettingsystem.models.BaseEntity;
+import com.example.bettingsystem.models.enums.UserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

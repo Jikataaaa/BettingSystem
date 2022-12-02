@@ -1,4 +1,4 @@
-package com.example.timetrackingsystem.models;
+package com.example.bettingsystem.models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

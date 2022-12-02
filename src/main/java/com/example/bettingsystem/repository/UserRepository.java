@@ -1,6 +1,6 @@
-package com.example.timetrackingsystem.repository;
+package com.example.bettingsystem.repository;
 
-import com.example.timetrackingsystem.models.entities.User;
+import com.example.bettingsystem.models.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
