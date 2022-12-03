@@ -12,7 +12,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
 @Table(name = "roles")
