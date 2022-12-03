@@ -1,5 +1,6 @@
 package com.example.bettingsystem.init;
 
+import com.example.bettingsystem.models.entities.RealResult;
 import com.example.bettingsystem.models.entities.Role;
 import com.example.bettingsystem.models.entities.User;
 import com.example.bettingsystem.models.enums.UserRole;

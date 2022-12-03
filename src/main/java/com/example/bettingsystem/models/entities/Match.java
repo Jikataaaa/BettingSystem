@@ -18,6 +18,8 @@ public class Match extends BaseEntity {
     private Tournament tournament;
     private Instant startTime;
 
+    private RealResult realResult;
+
     @OneToOne
     @JoinColumn(name = "home_team_id", referencedColumnName = "id")
     public Team getHomeTeam() {
@@ -54,5 +56,15 @@ public class Match extends BaseEntity {
 
     public void setStartTime(Instant startTime) {
         this.startTime = startTime;
+    }
+
+    @OneToOne
+    @JoinColumn(name = "real_result_id", referencedColumnName = "id")
+    public RealResult getRealResult() {
+        return realResult;
+    }
+
+    public void setRealResult(RealResult realResult) {
+        this.realResult = realResult;
     }
 }
