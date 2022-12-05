@@ -21,14 +21,22 @@ public class ApplicationSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http
 
-                .authorizeRequests(auth ->{
-                    auth.antMatchers("/").permitAll();
-                    auth.antMatchers("/users", "/asd").hasRole("USER");
+
+        return http
+                .csrf()
+                .disable()
+                .authorizeHttpRequests(auth ->{
+                    auth.antMatchers("user/login", "/asd").permitAll();
+                    auth.antMatchers("/users").hasRole("USER");
                     auth.antMatchers("/admin").hasRole("ADMIN");
+
                 })
-                .formLogin().loginPage("/login").and()
+                .formLogin()
+                .loginPage("/login")
+                .successForwardUrl("/asd")
+                .failureForwardUrl("/error")
+                .and()
                 .httpBasic(Customizer.withDefaults())
 
                 .build();
