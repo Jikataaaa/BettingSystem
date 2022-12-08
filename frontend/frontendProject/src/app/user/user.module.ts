@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [UserService]
 })

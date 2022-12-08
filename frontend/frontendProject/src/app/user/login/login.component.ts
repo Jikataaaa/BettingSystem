@@ -15,14 +15,15 @@ export class LoginComponent {
   }
 
   public login(form: NgForm) : void {
-    const {username, password} = form.value;
-    this.service.login({username, password}).subscribe({
-      next: () => {
-        const redirectUrl =  '/';
-        this.ActivateRoute.snapshot.queryParams['redirectUrl'] || '/';
-        this.router.navigate([redirectUrl]);
-      },
-    });
+    console.log("login component")
+   const {username, password} = form.value;
+   this.service.login({username, password}).subscribe({
+    next: () => {
+      const redirectUrl =  '/';
+      this.ActivateRoute.snapshot.queryParams['redirectUrl'] || '/';
+      this.router.navigate([redirectUrl]);
+    },
+  });
   }
 
 }
